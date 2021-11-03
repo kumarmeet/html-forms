@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="index.js" defer></script>
+		<title>HTML Forms</title>
+	</head>
+	<style>
+		form {
+			margin: 0 auto;
+			width: 50%;
+		}
+		label,
+		input,
+		button {
+			display: block;
+		}
+	</style>
+	<body>
+		<form action="/" method="GET" id="form">
+			<label for="username">Your Name</label>
+			<input
+				type="text"
+				name="username"
+				id="username"
+				required
+				placeholder="Your Name"
+			/>
+
+			<label for="emailaddress">Your Email Address</label>
+			<input type="email" name="emailaddress" id="emailaddress" required />
+
+			<label for="age">Your Age</label>
+			<input type="number" name="age" id="age" required min="18" max="80" />
+
+			<label for="password">Your Password</label>
+			<input
+				type="password"
+				name="password"
+				id="password"
+				required
+				minlength="10"
+				maxlength="100"
+			/>
+
+			<label for="dob">Your Date of Birth</label>
+			<input
+				type="date"
+				name="dob"
+				id="dob"
+				required
+				min="1990-01-01"
+				max="2000-01-01"
+			/>
+
+			<hr />
+
+			<h3>How should we verify your account?</h3>
+			<input type="radio" name="verify" id="sms" value="sms" />
+			<label for="sms">Via SMS</label>
+
+			<input type="radio" name="verify" id="call" value="call" />
+			<label for="call">Via Phone Call</label>
+
+			<input type="radio" name="verify" id="email" value="email" />
+			<label for="email">Via Email</label>
+
+			<label for="agree">Terms & Conditions</label>
+			<input type="checkbox" name="terms" id="agree" />
+
+			<label for="contactemail">Check me via Email</label>
+			<input
+				type="checkbox"
+				name="contact"
+				id="contactemail"
+				value="checkByemail"
+			/>
+
+			<label for="contactphone">Check me via Phone</label>
+			<input
+				type="checkbox"
+				name="contact"
+				id="contactphone"
+				value="checkByPhone"
+			/>
+
+			<label for="comment">Give your feedback!</label>
+			<textarea
+				name="feedback"
+				id="comment"
+				cols="30"
+				rows="10"
+				style="resize: vertical"
+			></textarea>
+
+			<label for="gender">Your Gender</label>
+			<select name="gender" id="gender">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				<option value="transgender">Transgender</option>
+			</select>
+
+			<button type="submit" id="submit-btn">Submit</button>
+			<button type="reset" id="cancel-btn">Reset</button>
+		</form>
+	</body>
+</html>
